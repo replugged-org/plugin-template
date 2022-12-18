@@ -27,8 +27,8 @@ the plugin when you save a file.
 Building using the script above will automatically install the updated version of the plugin in
 Replugged. You can find the plugin folder directories for your OS
 [here](https://github.com/replugged-org/replugged#installing-plugins-and-themes).  
-If you don't want to install the updated version, set the `NO_INSTALL` environment variable with any
-value: `NO_INSTALL=true pnpm run build`.
+If you don't want to install the updated version, append the `--no-install` flag:
+`pnpm run build --no-install`.
 
 You can format the code by running `pnpm run lint:fix`. The repository includes VSCode settings to
 automatically format on save.

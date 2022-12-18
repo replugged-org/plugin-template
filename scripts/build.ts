@@ -47,7 +47,7 @@ const install: esbuild.Plugin = {
   name: "install",
   setup: (build) => {
     build.onEnd(() => {
-      if (!process.env.NO_INSTALL) {
+      if (!process.argv.includes("--no-install")) {
         const dest = join(CONFIG_PATH, "plugins", manifest.id);
         if (existsSync(dest)) {
           rmSync(dest, { recursive: true });
