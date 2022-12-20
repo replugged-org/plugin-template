@@ -12,7 +12,7 @@ specifiers:
   eslint-plugin-node: ^11.1.0
   eslint-plugin-react: ^7.31.10
   prettier: ^2.8.1
-  replugged: 4.0.0-beta0.15
+  replugged: 4.0.0-beta0.18
   tsx: ^3.10.3
   typescript: ^4.8.4
 
@@ -28,7 +28,7 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@8.25.0
   eslint-plugin-react: 7.31.10_eslint@8.25.0
   prettier: 2.8.1
-  replugged: 4.0.0-beta0.15
+  replugged: 4.0.0-beta0.18
   tsx: 3.10.4
   typescript: 4.8.4
 
@@ -1510,13 +1510,6 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react/18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: true
-
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
     engines: {node: '>= 0.4'}
@@ -1531,11 +1524,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /replugged/4.0.0-beta0.15:
-    resolution: {integrity: sha512-PaEBZ4BxuE0+wEDXDiNokhLiV7gLdhy83t+VkKTUzILDyBCAKSdTqIWCPYh5uFzXkIwqzr3zsEI1G1yOWdv0cQ==}
+  /replugged/4.0.0-beta0.18:
+    resolution: {integrity: sha512-PNUyZAQdcOvkEDsG/8CFTocPjlLQnE0wMZlBDUTNSW+nIP67SpZwAdnu+BAgs6qO6a3z5qk3OGzHTSY1WPZgIQ==}
     engines: {node: '>=14.0.0'}
-    dependencies:
-      react: 18.2.0
     dev: true
 
   /resolve-from/4.0.0:
