@@ -15,6 +15,7 @@ const globalModules = {
     varName: "replugged",
     namedExports: [
       "Injector",
+      "Logger",
       "webpack",
       "common",
       "notices",
