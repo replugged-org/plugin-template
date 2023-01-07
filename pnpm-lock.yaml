@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@electron/asar': ^3.2.1
-  '@fal-works/esbuild-plugin-global-externals': ^2.1.2
   '@types/node': ^18.11.2
   '@typescript-eslint/eslint-plugin': ^5.40.1
   '@typescript-eslint/parser': ^5.40.1
@@ -18,7 +17,6 @@ specifiers:
 
 devDependencies:
   '@electron/asar': 3.2.1
-  '@fal-works/esbuild-plugin-global-externals': 2.1.2
   '@types/node': 18.11.2
   '@typescript-eslint/eslint-plugin': 5.40.1_ukgdydjtebaxmxfqp5v5ulh64y
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
@@ -101,10 +99,6 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@fal-works/esbuild-plugin-global-externals/2.1.2:
-    resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
   /@humanwhocodes/config-array/0.10.7:
