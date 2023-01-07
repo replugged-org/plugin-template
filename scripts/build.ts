@@ -2,9 +2,9 @@ import esbuild from "esbuild";
 import path, { join } from "path";
 import fs, { existsSync, rmSync } from "fs";
 import _manifest from "../manifest.json";
-import { Plugin } from "replugged/dist/types/addon";
+import { PluginManifest } from "replugged/dist/types/addon";
 
-const manifest: Plugin = _manifest;
+const manifest: PluginManifest = _manifest;
 
 const NODE_VERSION = "14";
 const CHROME_VERSION = "91";
