@@ -67,7 +67,7 @@ Replugged.
 Check the [plugin folder](https://github.com/replugged-org/replugged#installing-plugins-and-themes)
 for your OS and make sure the plugin is there. If not, make sure you have built the plugin and that
 the `NO_INSTALL` environment variable is not set.  
-You can run `replugged.plugins.list().then(console.log)` in the console to see a list of plugins in
+You can run `replugged.plugins.plugins.keys()` in the console to see a list of plugins in
 the plugin folder.
 
 ### Make sure the plugin is running.
