@@ -1,12 +1,13 @@
 import esbuild from "esbuild";
 import path, { join } from "path";
-import fs, { existsSync, rmSync } from "fs";
+import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from "fs";
 import _manifest from "../manifest.json";
 import { PluginManifest } from "replugged/dist/types/addon";
 
 const manifest: PluginManifest = _manifest;
-
+const watch = process.argv.includes("--watch");
 const CHROME_VERSION = "91";
+const REPLUGGED_FOLDER_NAME = "replugged";
 
 const globalModules: esbuild.Plugin = {
   name: "globalModules",
@@ -46,7 +47,6 @@ const globalModules: esbuild.Plugin = {
   },
 };
 
-const REPLUGGED_FOLDER_NAME = "replugged";
 export const CONFIG_PATH = (() => {
   switch (process.platform) {
     case "win32":
@@ -67,27 +67,25 @@ const install: esbuild.Plugin = {
     build.onEnd(() => {
       if (!process.argv.includes("--no-install")) {
         const dest = join(CONFIG_PATH, "plugins", manifest.id);
-        if (existsSync(dest)) {
-          rmSync(dest, { recursive: true });
-        }
-        fs.cpSync("dist", dest, { recursive: true });
+        if (existsSync(dest)) rmSync(dest, { recursive: true });
+        cpSync("dist", dest, { recursive: true });
         console.log("Installed updated version");
       }
     });
   },
 };
 
-const watch = process.argv.includes("--watch");
-
 const common: esbuild.BuildOptions = {
   absWorkingDir: path.join(__dirname, ".."),
   bundle: true,
-  minify: false,
-  sourcemap: true,
-  format: "cjs" as esbuild.Format,
+  format: "esm" as esbuild.Format,
   logLevel: "info",
+  minify: false,
+  platform: "browser",
+  plugins: [globalModules, install],
+  sourcemap: true,
+  target: `chrome${CHROME_VERSION}`,
   watch,
-  plugins: [install],
 };
 
 const targets = [];
@@ -97,11 +95,7 @@ if ("renderer" in manifest) {
     esbuild.build({
       ...common,
       entryPoints: [manifest.renderer],
-      platform: "browser",
-      target: `chrome${CHROME_VERSION}`,
       outfile: "dist/renderer.js",
-      format: "esm" as esbuild.Format,
-      plugins: [globalModules, install],
     }),
   );
 
@@ -113,21 +107,15 @@ if ("plaintextPatches" in manifest) {
     esbuild.build({
       ...common,
       entryPoints: [manifest.plaintextPatches],
-      platform: "browser",
-      target: `chrome${CHROME_VERSION}`,
       outfile: "dist/plaintextPatches.js",
-      format: "esm" as esbuild.Format,
-      plugins: [globalModules, install],
     }),
   );
 
   manifest.plaintextPatches = "plaintextPatches.js";
 }
 
-if (!fs.existsSync("dist")) {
-  fs.mkdirSync("dist");
-}
+if (!existsSync("dist")) mkdirSync("dist");
 
-fs.writeFileSync("dist/manifest.json", JSON.stringify(manifest));
+writeFileSync("dist/manifest.json", JSON.stringify(manifest));
 
 Promise.all(targets);
