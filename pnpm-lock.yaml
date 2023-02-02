@@ -9,7 +9,7 @@ specifiers:
   eslint-plugin-node: ^11.1.0
   eslint-plugin-react: ^7.31.10
   prettier: ^2.8.1
-  replugged: ^4.0.0-beta0.22
+  replugged: 4.0.0-beta0.22
   typescript: ^4.8.4
 
 devDependencies:
@@ -176,7 +176,7 @@ packages:
       '@octokit/request-error': 3.0.3
       '@octokit/types': 9.0.0
       is-plain-object: 5.0.0
-      node-fetch: 2.6.8
+      node-fetch: 2.6.9
       universal-user-agent: 6.0.0
     transitivePeerDependencies:
       - encoding
@@ -1193,8 +1193,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: true
 
-  /node-fetch/2.6.8:
-    resolution: {integrity: sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg==}
+  /node-fetch/2.6.9:
+    resolution: {integrity: sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
