@@ -13,7 +13,6 @@
     "id": "replugged-org/plugin-template"
   },
   "license": "MIT",
-  "source": "https://github.com/replugged-org/plugin-template",
   "type": "replugged-plugin",
   "renderer": "src/index.ts",
   "source": "https://github.com/replugged-org/plugin-template",
