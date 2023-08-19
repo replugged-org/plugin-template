@@ -15,5 +15,7 @@
   "license": "MIT",
   "source": "https://github.com/replugged-org/plugin-template",
   "type": "replugged-plugin",
-  "renderer": "src/index.ts"
+  "renderer": "src/index.ts",
+  "source": "https://github.com/replugged-org/plugin-template",
+  "image": ["https://i.imgur.com/14CNs3a.png?CHANGE-THIS-URL"]
 }
