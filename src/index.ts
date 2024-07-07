@@ -8,9 +8,11 @@ export async function start(): Promise<void> {
     startTyping: (channelId: string) => void;
   }>(webpack.filters.byProps("startTyping"));
   const getChannelMod = await webpack.waitForModule<{
-    getChannel: (id: string) => {
-      name: string;
-    };
+    getChannel: (id: string) =>
+      | {
+          name: string;
+        }
+      | undefined;
   }>(webpack.filters.byProps("getChannel"));
 
   if (typingMod && getChannelMod) {

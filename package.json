@@ -4,7 +4,7 @@
   "description": "A plugin template",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=9.0.0"
   },
   "scripts": {
     "build": "replugged build plugin",
@@ -23,15 +23,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "eslint": "^8.56.0",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.2.2",
-    "replugged": "^4.7.7",
-    "typescript": "^5.3.3"
+    "prettier": "^3.3.2",
+    "replugged": "^4.8.1",
+    "typescript": "^5.4.5"
   }
 }
