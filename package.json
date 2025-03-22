@@ -2,10 +2,12 @@
   "name": "plugin-template",
   "version": "1.0.0",
   "description": "A plugin template",
+  "license": "ISC",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "pnpm": ">=10.0.0"
   },
+  "author": "",
   "scripts": {
     "build": "replugged build plugin",
     "watch": "replugged build plugin --watch",
@@ -19,18 +21,15 @@
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.14.10",
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.15.0",
-    "eslint": "^8.57.0",
-    "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
-    "eslint-plugin-node": "^11.1.0",
-    "prettier": "^3.3.2",
-    "replugged": "^4.8.1",
-    "typescript": "^5.4.5"
+    "@eslint/js": "^9.23.0",
+    "@types/node": "^20.17.25",
+    "eslint": "^9.23.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "replugged": "^4.8.4",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.27.0"
   }
 }
