@@ -22,14 +22,14 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
   "devDependencies": {
-    "@eslint/js": "^9.24.0",
-    "@types/node": "^20.17.30",
-    "eslint": "^9.24.0",
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.25.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0",
     "prettier": "^3.5.3",
-    "replugged": "^4.9.0",
+    "replugged": "^4.9.1",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.29.1"
+    "typescript-eslint": "^8.30.1"
   }
 }
