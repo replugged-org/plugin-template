@@ -13,7 +13,7 @@ export default tseslint.config(
     name: "base",
     settings: {
       react: {
-        version: "18.3",
+        version: "19.0",
       },
     },
     languageOptions: {
@@ -58,6 +58,7 @@ export default tseslint.config(
       "no-useless-call": "warn",
       "no-useless-computed-key": "warn",
       "no-useless-concat": "warn",
+      "no-useless-escape": ["error", { allowRegexCharacters: ["i"] }],
       "no-useless-rename": "warn",
       "no-useless-return": "warn",
       radix: "error",
